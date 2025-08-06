@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dynamic Quiz Game</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <div id="question-box">
+      <h2 id="question">Question text</h2>
+      <div class="timer-container">
+        <div id="timer"></div>
+        <div id="countdown">10</div>
+      </div>
+      <div id="options"></div>
+    </div>
+
+    <div id="result" class="hidden">
+      <h2 id="congrats"></h2>
+      <h3>Your Score: <span id="score"></span></h3>
+      <button onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
