@@ -158,7 +158,7 @@ function showResult() {
   document.getElementById("question-box").classList.add("hidden");
   resultBox.classList.remove("hidden");
 
-  congratsEl.innerText = "🎉 Congratulations! 🎉";
+  congratsEl.innerText = " Congratulations! ";
   scoreEl.innerText = `${score} / ${questions.length}`;
 }
 
@@ -187,3 +187,4 @@ function startCountdown() {
 }
 
 window.onload = loadQuestion;
+
