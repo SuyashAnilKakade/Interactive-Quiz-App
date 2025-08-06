@@ -1,0 +1,135 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  animation: gradientBG 15s ease infinite;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#question-box, #result {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+#question {
+  margin-bottom: 30px;
+  font-size: 1.5em;
+}
+
+#options button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 15px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+#options button:hover {
+  transform: scale(1.05);
+}
+
+#options button.correct {
+  background-color: #4caf50;
+  color: white;
+}
+
+#options button.wrong {
+  background-color: #f44336;
+  color: white;
+}
+
+.timer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#timer {
+  height: 8px;
+  background: #4caf50;
+  border-radius: 5px;
+  flex-grow: 1;
+  animation: countdown 10s linear forwards;
+}
+
+@keyframes countdown {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+
+#countdown {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+#congrats {
+  font-size: 2.5em;
+  animation: pulse 1s infinite alternate;
+  color: #ff5722;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); opacity: 0.7; }
+  to { transform: scale(1.2); opacity: 1; }
+}
+
+#result h3 {
+  font-size: 1.8em;
+  color: #4caf50;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
